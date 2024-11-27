@@ -3,9 +3,15 @@
 
 import pytest
 import sys #Import locations of files in our Sys
-sys.path += ['../src']
-#Same path as current, then add a return, then go to src.
-#Now we're "in the src folder"
+import os 
+
+#Modifying the main way we look at the path because its not always run from this folder...
+
+# Get the absolute path of the 'src' directory
+src_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../src'))
+# Add the absolute path of the 'src' directory to sys.path
+sys.path.append(src_dir)
+
 
 from sample import *
 #From sample.py file, we import all functions.
