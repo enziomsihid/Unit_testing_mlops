@@ -1,0 +1,11 @@
+# Ignore specific files
+unit_testing_simple
+
+# Ignore all .log files
+*.log
+
+# Ignore a directory
+/node_modules/
+
+# Ignore system files
+.DS_Store
